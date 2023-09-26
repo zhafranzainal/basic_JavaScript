@@ -17,3 +17,9 @@ document.getElementById("movie-title").textContent = movieTitle;
 document.getElementById("movie-rating").textContent = movieRate;
 document.getElementById("movie-year").textContent = releaseYear;
 document.getElementById("movie-age").textContent = forAllAges ? "Yes" : "No";
+
+var paragraph = 'JavaScript is a programming language or, in other words, a means by which a computer is instructed to do things';
+var paragraphLen = paragraph.length;
+var paragraphLowercase = paragraph.toLowerCase();
+
+console.log(paragraph === paragraphLowercase);
