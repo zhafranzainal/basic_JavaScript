@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Platformer Game (Optimized)</title>
+
+    <style>
+        .platform {
+            width: 200px;
+            height: 20px;
+            background-color: #009900;
+            position: absolute;
+        }
+
+        .carrot {
+            width: 20px;
+            height: 20px;
+            background-color: #FFA500;
+            position: absolute;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <script>
+
+        // Define the platform positions
+        const platformPositions = [
+            { left: 100, top: 300 },
+            { left: 300, top: 200 },
+            { left: 500, top: 100 }
+        ];
+
+        // Create platforms and carrots dynamically
+        platformPositions.forEach((position, index) => {
+
+            const platform = document.createElement("div");
+            platform.className = "platform";
+            platform.style.left = `${position.left}px`;
+            platform.style.top = `${position.top}px`;
+            document.body.appendChild(platform);
+
+            for (let i = 0; i < 2; i++) {
+                const carrot = document.createElement("div");
+                carrot.className = "carrot";
+                carrot.style.left = `${position.left + 30 + i * 100}px`;
+                carrot.style.top = `${position.top - 30}px`;
+                document.body.appendChild(carrot);
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
