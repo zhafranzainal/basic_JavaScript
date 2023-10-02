@@ -13,7 +13,7 @@
             "What country has the longest coastline in the world?",
             "By size, what is the smallest country in the world?",
             "Which country has a unicorn as its national animal?",
-            "Which country is home to the world's tallest building",
+            "Which country is home to the world's tallest building?",
             "Officially, what is the coldest country in the world?"
         ];
 
@@ -25,6 +25,7 @@
             "russia"
         ];
 
+        var life = 3;
         var score = 0;
         var i = 0;
 
@@ -35,13 +36,21 @@
 
             if (playerAnswer == answerKey) {
                 score += 20;
+            } else {
+                life--;
+                alert(`Remaining life: ${life}`);
             }
 
             i++;
 
-        } while (i < questionList.length)
+        } while (i < questionList.length && life > 0)
 
-        console.log(`Your score is ${score}`);
+        if (life === 0) {
+            alert("Game over! You've run out of lives.");
+        } else {
+            alert(`Your score is ${score}`);
+            alert(`Remaining life: ${life}`);
+        }
 
     </script>
 
