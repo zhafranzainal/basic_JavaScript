@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Food Recommendation System</title>
+</head>
+
+<body>
+
+    <h1>Food Recommendation System</h1>
+    <button onclick="rice()">Rice Dish</button>
+    <button onclick="noodle()">Noodle Dish </button>
+
+    <script>
+
+        function rice() {
+
+            var menus = [
+                "Risotto",
+                "Fried Rice",
+                "Sushi",
+                "Bibimbap",
+                "Curry Rice"
+            ];
+
+            var random = Math.floor(Math.random() * menus.length);
+            var recommendation = menus[random];
+
+            alert(`I recommend ${recommendation}`);
+
+        }
+
+        function noodle() {
+
+            var menus = [
+                "Udon",
+                "Pad Thai",
+                "Fried Noodles",
+                "Wonton Noodle Soup",
+                "Laksa"
+            ];
+
+            var random = Math.floor(Math.random() * menus.length);
+            var recommendation = menus[random];
+
+            alert(`I recommend ${recommendation}`);
+
+        }
+
+    </script>
+
+</body>
+
+</html>
