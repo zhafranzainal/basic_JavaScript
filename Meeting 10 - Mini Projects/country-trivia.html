@@ -21,7 +21,7 @@
             "canada",
             "vatican city",
             "scotland",
-            "united arab emirates",
+            ["united arab emirates", "uae", "emirates"],
             "russia"
         ];
 
@@ -34,7 +34,7 @@
             var playerAnswer = prompt(questionList[i]).toLowerCase();
             var answerKey = answerKeyList[i];
 
-            if (playerAnswer == answerKey) {
+            if (answerKey.includes(playerAnswer)) {
                 score += 20;
             } else {
                 life--;
@@ -48,8 +48,7 @@
         if (life === 0) {
             alert("Game over! You've run out of lives.");
         } else {
-            alert(`Your score is ${score}`);
-            alert(`Remaining life: ${life}`);
+            alert(`Your score is ${score} with remaining life as ${life}!`);
         }
 
     </script>
