@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Math Geometry Solver</title>
+</head>
+
+<body>
+
+    <button onclick="square(5)">Square</button>
+    <button onclick="rectangle(10, 5)">Rectangle</button>
+
+    <script>
+
+        var area;
+        var perimeter;
+
+        function square(side) {
+
+            area = side * side;
+            perimeter = 4 * side;
+
+            document.write("--- Square --- <br>");
+            document.write(`Area       : ${area} <br>`);
+            document.write(`Perimeter  : ${perimeter} <br>`);
+
+        }
+
+        function rectangle(width, height) {
+
+            area = width * height;
+            perimeter = (2 * width) + (2 * height);
+
+            document.write("--- Rectangle --- <br>");
+            document.write(`Area       : ${area} <br>`);
+            document.write(`Perimeter  : ${perimeter} <br>`);
+
+        }
+
+    </script>
+
+</body>
+
+</html>
