@@ -9,6 +9,7 @@
 
     <button onclick="square(5)">Square</button>
     <button onclick="rectangle(10, 5)">Rectangle</button>
+    <button onclick="circle(5)">Circle</button>
 
     <script>
 
@@ -34,6 +35,17 @@
             document.write("--- Rectangle --- <br>");
             document.write(`Area       : ${area} <br>`);
             document.write(`Perimeter  : ${perimeter} <br>`);
+
+        }
+
+        function circle(radius) {
+
+            area = Math.PI * radius * radius;
+            circumference = 2 * Math.PI * radius;
+
+            document.write("--- Circle --- <br>");
+            document.write(`Area       : ${area.toFixed(4)} <br>`);
+            document.write(`Circumference  : ${circumference.toFixed(4)} <br>`);
 
         }
 
