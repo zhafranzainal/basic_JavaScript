@@ -8,40 +8,16 @@
 <body>
 
     <h1>Food Recommendation System</h1>
-    <button onclick="rice()">Rice Dish</button>
-    <button onclick="noodle()">Noodle Dish </button>
+
+    <button onclick="recommendDish(['Risotto', 'Fried Rice', 'Sushi', 'Bibimbap', 'Curry Rice'])">Rice Dish</button>
+    <button onclick="recommendDish(['Udon', 'Pad Thai', 'Fried Noodles', 'Wonton Noodle Soup', 'Laksa'])">Noodle Dish</button>
 
     <script>
 
-        function rice() {
+        function recommendDish(menuOptions) {
 
-            var menus = [
-                "Risotto",
-                "Fried Rice",
-                "Sushi",
-                "Bibimbap",
-                "Curry Rice"
-            ];
-
-            var random = Math.floor(Math.random() * menus.length);
-            var recommendation = menus[random];
-
-            alert(`I recommend ${recommendation}`);
-
-        }
-
-        function noodle() {
-
-            var menus = [
-                "Udon",
-                "Pad Thai",
-                "Fried Noodles",
-                "Wonton Noodle Soup",
-                "Laksa"
-            ];
-
-            var random = Math.floor(Math.random() * menus.length);
-            var recommendation = menus[random];
+            var random = Math.floor(Math.random() * menuOptions.length);
+            var recommendation = menuOptions[random];
 
             alert(`I recommend ${recommendation}`);
 
