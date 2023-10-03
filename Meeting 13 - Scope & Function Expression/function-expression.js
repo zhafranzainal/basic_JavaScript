@@ -9,3 +9,8 @@ sayHello();
 function sayHello() {
     console.log("Hello");
 }
+
+// Immediately Invoked Function Expression (IIFE)
+(function () {
+    console.log("Hello");
+})();
