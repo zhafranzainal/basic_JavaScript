@@ -3,5 +3,9 @@ var greeting = function () {
     console.log("Hello World");
 }
 
-// call function
 greeting();
+sayHello();
+
+function sayHello() {
+    console.log("Hello")
+}
