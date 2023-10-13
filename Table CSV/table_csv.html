@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Table CSV</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Table 1</h1>
+
+    <table>
+
+        <tr>
+            <th>Index #</th>
+            <th>Value</th>
+        </tr>
+
+        <script>
+
+            fetch('Table_Input.csv')
+                .then(response => response.text())
+                .then(data => {
+
+                    // Skip the header row
+                    const rows = data.trim().split('\n').slice(1);
+
+                    rows.forEach(row => {
+
+                        const columns = row.split(',');
+                        const tr = document.createElement('tr');
+
+                        columns.forEach(column => {
+                            const td = document.createElement('td');
+                            td.textContent = column;
+                            tr.appendChild(td);
+                        });
+
+                        document.querySelector('table').appendChild(tr);
+
+                    });
+
+                });
+
+        </script>
+
+    </table>
+
+</body>
+
+</html>
