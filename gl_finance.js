@@ -1,8 +1,8 @@
-// Locate the table using the correct ID
-const table = document.querySelector("#tab_61043");
+// Locate the table dynamically by finding the table class instead of specific table ID
+const table = document.querySelector("table.table_head");
 
 if (!table) {
-    console.error("Table with ID 'tab_61043' not found.");
+    console.error("Table with the class 'table_head' not found.");
 } else {
     // Get all rows from the table
     const rows = table.querySelectorAll("tr");
