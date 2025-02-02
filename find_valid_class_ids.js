@@ -1,5 +1,8 @@
 (async () => {
 
+    // Set to store unique course names
+    const courseList = new Set();
+
     for (let i = 29000; i < 30000; i++) {
 
         let res = await fetch(`/teacher/class/${i}/course`);
@@ -32,7 +35,15 @@
 
             }
 
-            console.log(`Valid ID: ${i} | Course: ${text}`);
+            // Only print the course name if it hasn't been printed yet
+            if (text !== "N/A" && !courseList.has(text)) {
+
+                console.log(`Valid ID: ${i} | Course: ${text}`);
+
+                // Add the course name to the set
+                courseList.add(text);
+
+            }
 
         }
 
